@@ -1,0 +1,32 @@
+<h2>All projects</h2>
+
+<button class="btn" (click)="getAll()">GetAll</button>
+
+<table>
+  <tr *ngFor="let entity of list">
+    <td>{{entity.id}}</td>
+    <td>{{entity.projectManagerId}}</td>
+    <td>{{entity.name}}</td>
+    <td>{{entity.description}}</td>
+    <td>{{entity.members}}</td>
+  </tr>
+</table>
+
+
+<h2>Personal projects</h2>
+
+<button class="btn" (click)="getPersonal()">GetPersonal</button>
+
+<table>
+  <tr *ngFor="let entity of personal">
+    <td>{{entity}}</td>
+  </tr>
+</table>
+
+<h2>Add projects</h2>
+<label>Developer:</label><input id="new_name" #name>
+<label>Projects:</label><input id="new_email" #path>
+<button class="btn" (click)="addProjects(name.value, path.value)">Add</button><br/>
+
+
+

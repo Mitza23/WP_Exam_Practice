@@ -1,0 +1,13 @@
+<h1>LogIn</h1>
+
+<label>Username</label><input id="username" #old_username>
+<label>Password</label><input id="password" #old_password>
+<button class="btn" (click)="checkProfile(old_username, old_password)">LogIn</button>
+
+
+<h1>Register</h1>
+
+<label>Username</label><input id="new_username" #username>
+<label>Password</label><input id="new_password" #password>
+
+<button class="btn" (click)="addProfile(username, password)">Register</button>

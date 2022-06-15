@@ -1,0 +1,21 @@
+<h2>List of files</h2>
+
+<table>
+  <tr *ngFor="let entity of list">
+    <td>{{entity.id}}</td>
+    <td>{{entity.userid}}</td>
+    <td>{{entity.filename}}</td>
+    <td>{{entity.filepath}}</td>
+    <td>{{entity.size}}</td>
+  </tr>
+</table>
+<button (click)="nextPage()">Next</button>
+<button (click)="previousPage()">Prev</button>
+
+<p>Most frequent: {{filename}}</p>
+
+
+<label>Name:</label><input id="new_name" #name>
+<label>Path:</label><input id="new_email" #path>
+<label>Size:</label><input id="new_address" #size>
+<button class="btn" (click)="addFile(name, path, size)">Add</button><br/>
