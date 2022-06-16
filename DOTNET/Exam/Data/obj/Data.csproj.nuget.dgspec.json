@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Volumes/D/UBB/WEB/ Exam/dotnet/Exam/Data/Data.csproj": {}
+    "D:\\Facultate\\Sem_4\\WP\\WP_Exam_Practice\\DOTNET\\Exam\\Data\\Data.csproj": {}
   },
   "projects": {
-    "/Volumes/D/UBB/WEB/ Exam/dotnet/Exam/Data/Data.csproj": {
+    "D:\\Facultate\\Sem_4\\WP\\WP_Exam_Practice\\DOTNET\\Exam\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/D/UBB/WEB/ Exam/dotnet/Exam/Data/Data.csproj",
+        "projectUniqueName": "D:\\Facultate\\Sem_4\\WP\\WP_Exam_Practice\\DOTNET\\Exam\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Volumes/D/UBB/WEB/ Exam/dotnet/Exam/Data/Data.csproj",
-        "packagesPath": "/Users/teodorfilp/.nuget/packages/",
-        "outputPath": "/Volumes/D/UBB/WEB/ Exam/dotnet/Exam/Data/obj/",
+        "projectPath": "D:\\Facultate\\Sem_4\\WP\\WP_Exam_Practice\\DOTNET\\Exam\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\mitza\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\Sem_4\\WP\\WP_Exam_Practice\\DOTNET\\Exam\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/teodorfilp/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mitza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

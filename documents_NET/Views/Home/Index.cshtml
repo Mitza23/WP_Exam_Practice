@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Documents</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            getPosts();
+        });
+
+        function getPosts() {
+            $.get("/Home/GetDocuments", {},
+                function (data, status) {
+                    console.log(data);
+                    $("#maindiv").html(data);
+                });
+        }
+
+        function filter() {
+            $.get("/Home/Filter", { title: $("#title").val() },
+                function (data, status) {
+                    console.log(data);
+                    $("#maindiv").html(data);
+                });
+        }
+
+        function onUpdateClicked(documentId) {
+            sessionStorage.setItem("documentId", documentId);
+            $(location).prop('href', 'Generate');
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    <h3>Welcome!</h3>
+    <div class="container">
+        <div class="row">
+            
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title..." required" />
+                </div>
+               
+                <button type="button" class="btn btn-outline-success" onclick="filter()">Filter</button>
+
+            
+        </div>
+    </div>
+    All documents:
+    <div id="maindiv"></div>
+</body>
+</html>
