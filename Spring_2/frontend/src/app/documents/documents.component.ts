@@ -24,7 +24,10 @@ export class DocumentsComponent implements OnInit {
   }
 
   onSelect(entity: Document) {
-    this.http.get<string>(this.backendUrl + `/document?document=${this.selected}`)
+    this.selected = entity;
+    // @ts-ignore
+    var params = new URLSearchParams(this.selected);
+    this.http.post(this.backendUrl + `/document`, this.selected, {responseType: 'text'})
       .subscribe(
         doc => {
           this.document = doc;

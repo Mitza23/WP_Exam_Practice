@@ -26,8 +26,8 @@ public class MainController {
         return service.findAllByTitle(title);
     }
 
-    @GetMapping("/document")
-    public String getDocument(@RequestParam Document document) {
+    @PostMapping("/document")
+    public String getDocument(@RequestBody Document document) {
         return service.generateDocument(document);
     }
 }

@@ -38,7 +38,9 @@ public class Service {
                     if(word.matches("^\\{\\{.+}}$")){
                         int len = word.length();
                         word = word.substring(2, len - 2);
-                        result.append(keywordRepository.findFirstByKey(word));
+                        Optional<Keyword> optional = keywordRepository.findFirstByKey(word);
+                        optional.ifPresent(value -> result.append(value.getValue()));
+//                        result.append(keywordRepository.findFirstByKey(word).get().getValue());
                     }
                     else {
                         result.append(word);
