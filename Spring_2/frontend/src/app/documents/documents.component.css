@@ -1,0 +1,21 @@
+
+.students tr:nth-child(even) {
+  background-color: #ff9999;
+}
+
+.students td {
+  min-width: 60px;
+  padding-left: 5px;
+}
+
+.students tr:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+  position: relative;
+}
+
+.students tr.selected {
+  background-color: #090602;
+  color: white;
+}

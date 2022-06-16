@@ -1,0 +1,8 @@
+<div *ngIf="router.url == '/'">
+  <label>Your name is:</label>
+  <br>
+  <input type="text" [(ngModel)]="username" placeholder="Username">
+  <br>
+  <button class="button" (click)="submit()">Log In</button>
+</div>
+<router-outlet></router-outlet>

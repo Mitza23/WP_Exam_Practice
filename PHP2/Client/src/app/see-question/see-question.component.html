@@ -1,0 +1,13 @@
+<h2>Current Question:</h2>
+Text:
+<input type="text" readonly [(ngModel)]="this.service.questions[this.question].text">
+<br>
+Answer 1:
+<input type="text" readonly [(ngModel)]="this.service.questions[this.question].correctAnswer">
+<br>
+Answer 2:
+<input type="text" readonly [(ngModel)]="this.service.questions[this.question].wrongAnswer">
+<br>
+Your answer:
+<input type="text" [(ngModel)]="currentAnswer">
+<button class="button" (click)="next()">Next</button>

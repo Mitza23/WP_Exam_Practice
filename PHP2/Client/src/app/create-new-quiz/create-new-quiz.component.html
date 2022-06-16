@@ -1,0 +1,15 @@
+<div *ngIf="!sent">
+  <h2>The number of questions is:</h2>
+  <input type="number" [(ngModel)]="questions">
+  <button class="button" (click)="submit()">Set Number of Questions</button>
+</div>
+<div *ngIf="sent">
+  <h2>The name of the quiz is:</h2>
+  <input type="text" [(ngModel)]="name" placeholder="Quiz Title">
+  <br>
+  <div *ngFor="let item of this.array; let i=index; trackBy:trackByIdx">
+    <input type="text" [(ngModel)]="this.array[i]" placeholder="Question ID">
+    <br>
+  </div>
+  <button class="button" (click)="addQuestions()">Add Questions</button>
+</div>

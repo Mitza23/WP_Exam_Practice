@@ -1,0 +1,23 @@
+<h2>Documents</h2>
+<table class="students">
+  <tr *ngFor="let entity of list" (click)="onSelect(entity)">
+    <td>{{entity.id}}</td>
+    <td>{{entity.title}}</td>
+    <td>{{entity.listOfTemplates}}</td>
+  </tr>
+</table>
+
+<div *ngIf="selected">
+  <p>{{document}}</p>
+</div>
+
+<label>Title</label><input type="text" #searchTitle>
+<button (click)="getDocuments(searchTitle.value)">Search</button>
+
+
+<p>Add a keyword</p>
+<label>key</label><input #key>
+<label>value</label><input #value>
+<button (click)="addKeyword(key.value, value.value)">Add</button>
+
+
